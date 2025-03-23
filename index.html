@@ -4,33 +4,38 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Temperature Converter</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="styles/styles.css">
     </head>
     <body>        
-        <script src="" async defer></script>
-        <div class="main-container">
-            <h1>Temperature Converter</h1>
-            <label for="temperature">Enter the temperature, select the from and to units, and submit</label>
-            <input type="number" id="temperature" name="temperature" step="0.1" value="0">
+        <script src="js/script.js" async defer></script>
+        <div id="main-container">
+            <p id="title">Temperature Converter 🔥 ❄️</p>
+            
+            <label for="temperature">Enter the temperature, select the units, and click 'Calculate!' below to see the conversion</label>
+            <input type="number" id="temperature" name="temperature" step="0.10" value="0.00">
 
-            <select name="from-units" id="from-units">
+            <select name="from-units" id="fromUnit" selected="From Unit">
+                <option value="" selected disabled>From Unit</option>
                 <option value="Celsius">Celsius</option>
                 <option value="Fahrenheit">Fahrenheit</option>
                 <option value="Kelvin">Kelvin</option>
             </select>
 
-            <select name="to-units" id="to-units">
+            <select name="to-units" id="toUnit">
+                <option value="" selected disabled>To Unit</option>
                 <option value="Celsius">Celsius</option>
                 <option value="Fahrenheit">Fahrenheit</option>
                 <option value="Kelvin">Kelvin</option>
             </select>
 
-            <button type="button">
-                Calculate
+            <button type="button" id="button" disabled="true">
+                Calculate!
             </button>
+
+            <p id="result"></p>
         </div>
     </body>
 </html>
