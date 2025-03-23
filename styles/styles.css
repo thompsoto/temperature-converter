@@ -50,8 +50,9 @@ label {
     height: 600px;
     justify-content: center;
     margin: auto;
+    min-width: 500px;
     padding: 30px;
-    width: 40%;
+    width: 500px;
 }
 
 #result {
